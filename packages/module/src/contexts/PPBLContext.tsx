@@ -1,8 +1,3 @@
-/**
- * https://stackoverflow.com/questions/72325544/react-component-cannot-read-properties-of-null-reading-usestate
- * https://blog.maximeheckel.com/posts/duplicate-dependencies-npm-link/
- */
-
 import React from "react";
 
 import { createContext, useState } from "react";
@@ -31,17 +26,12 @@ const PPBLContext = createContext<CurrentPPBLContext>(initialContext);
 
 type Props = {
   children?: React.ReactNode;
-  issuerPolicyID: string;
-  treasury: { address: string };
-  contributorPolicyID: string;
+  // issuerPolicyID: string;
+  // treasury: { address: string };
+  // contributorPolicyID: string;
 };
 
-const PPBLContextProvider: React.FC<Props> = ({
-  children,
-  issuerPolicyID,
-  treasury,
-  contributorPolicyID,
-}) => {
+const PPBLContextProvider: React.FC<Props> = ({ children }) => {
   const [currentContext, setCurrentContext] =
     useState<CurrentPPBLContext>(initialContext);
 

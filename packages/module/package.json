@@ -1,0 +1,77 @@
+{
+  "name": "@andamiojs/core",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc && vite build --watch",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "eslint --fix 'src/**/*.{jsx,ts,tsx}'",
+    "format": "prettier --write src//**/*.{ts,tsx,css} --config ./.prettierrc"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "yarn eslint",
+      "yarn format"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/andamiojs.es.js",
+      "require": "./dist/andamiojs.umd.js"
+    }
+  },
+  "main": "./dist/andamiojs.umd.js",
+  "module": "./dist/andamiojs.es.js",
+  "types": "./dist/index.d.ts",
+  "devDependencies": {
+    "@apollo/client": "^3.7.15",
+    "@babel/polyfill": "^7.12.1",
+    "@types/node": "^18.7.6",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.34.0",
+    "@typescript-eslint/parser": "^5.34.0",
+    "@vitejs/plugin-react": "^2.1.0",
+    "copy-to-clipboard": "^3.3.3",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "graphql": "^16.6.0",
+    "graphql-request": "^6.1.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "vite-plugin-dts": "^1.4.1",
+    "vite-plugin-linter": "^1.2.0",
+    "vite-tsconfig-paths": "^3.5.0"
+  },
+  "peerDependencies": {
+    "react": "16.8.0 || >=17.x",
+    "react-dom": "16.8.0 || >=17.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jinglescode/andamiojs"
+  },
+  "keywords": [],
+  "author": "jinglescode",
+  "bugs": {
+    "url": "https://github.com/jinglescode/andamiojs/issues"
+  },
+  "homepage": "https://github.com/jinglescode/andamiojs#readme",
+  "license": "MIT"
+}
