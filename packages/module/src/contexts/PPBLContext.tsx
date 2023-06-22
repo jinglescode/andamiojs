@@ -31,6 +31,9 @@ type Props = {
   // contributorPolicyID: string;
 };
 
+/**
+ * This is a magic provider
+ */
 const PPBLContextProvider: React.FC<Props> = ({ children }) => {
   const [currentContext, setCurrentContext] =
     useState<CurrentPPBLContext>(initialContext);

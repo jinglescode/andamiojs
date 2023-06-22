@@ -10,7 +10,8 @@
     "start:module": "lerna exec --scope @andamiojs/core -- yarn dev",
     "build": "lerna link && yarn build:module && yarn build:react && yarn build:contracts && yarn build:demo",
     "build:starter": "lerna exec --scope @andamiojs/starter -- yarn build",
-    "build:module": "lerna exec --scope @andamiojs/core -- yarn build"
+    "build:module": "lerna exec --scope @andamiojs/core -- yarn build",
+    "build:docs": "lerna exec --scope @andamiojs/core -- yarn build:docs"
   },
   "devDependencies": {
     "@types/node": "18.6.1",
